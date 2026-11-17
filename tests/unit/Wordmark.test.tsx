@@ -5,8 +5,10 @@ import { describe, it, expect } from 'vitest'
 import Wordmark from '../../src/components/Wordmark'
 
 describe('Wordmark', () => {
-  it('renders svg', () => {
-    const { getByLabelText } = render(<Wordmark />)
-    expect(getByLabelText('FilePizza logo')).toBeInTheDocument()
+  it('renders the product name', () => {
+    const { getByRole } = render(<Wordmark />)
+    expect(
+      getByRole('heading', { name: 'Potato Transfer' }),
+    ).toBeInTheDocument()
   })
 })

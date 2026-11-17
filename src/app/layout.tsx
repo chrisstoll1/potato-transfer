@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../components/Footer'
 import '../styles.css'
 import { ThemeProvider } from '../components/ThemeProvider'
 import { ModeToggle } from '../components/ModeToggle'
@@ -8,14 +7,17 @@ import { Viewport } from 'next'
 import { ViewTransitions } from 'next-view-transitions'
 
 export const metadata = {
-  title: 'FilePizza • Your files, delivered.',
+  metadataBase: new URL('https://transfer.potato-server.net'),
+  title: 'Potato Transfer • Your files, delivered.',
   description: 'Peer-to-peer file transfers in your web browser.',
   charSet: 'utf-8',
+  icons: { icon: '/potato.svg' },
   openGraph: {
-    url: 'https://file.pizza',
-    title: 'FilePizza • Your files, delivered.',
+    url: 'https://transfer.potato-server.net',
+    siteName: 'Potato Transfer',
+    title: 'Potato Transfer • Your files, delivered.',
     description: 'Peer-to-peer file transfers in your web browser.',
-    images: [{ url: 'https://file.pizza/images/fb.png' }],
+    images: [{ url: '/potato.svg' }],
   },
 }
 
@@ -38,7 +40,6 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <FilePizzaQueryClientProvider>
               <main>{children}</main>
-              <Footer />
               <ModeToggle />
             </FilePizzaQueryClientProvider>
           </ThemeProvider>

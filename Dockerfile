@@ -33,6 +33,7 @@ ENV PORT 3000
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
+COPY LICENSE ./LICENSE
 
 USER node
 EXPOSE 3000

@@ -16,7 +16,6 @@ import { getFileName } from '../fs'
 import TitleText from '../components/TitleText'
 import SubtitleText from '../components/SubtitleText'
 import { pluralize } from '../utils/pluralize'
-import TermsAcceptance from '../components/TermsAcceptance'
 import AddFilesButton from '../components/AddFilesButton'
 
 function PageWrapper({ children }: { children: React.ReactNode }): JSX.Element {
@@ -40,7 +39,6 @@ function InitialState({
         <TitleText>Peer-to-peer file transfers in your browser.</TitleText>
       </div>
       <DropZone onDrop={onDrop} />
-      <TermsAcceptance />
     </PageWrapper>
   )
 }
@@ -105,7 +103,7 @@ function UploadingState({
         You are uploading {pluralize(uploadedFiles.length, 'file', 'files')}.
       </TitleText>
       <SubtitleText>
-        Leave this tab open. FilePizza does not store files.
+        Leave this tab open. Potato Transfer does not store files.
       </SubtitleText>
       <UploadFileList files={fileListData} />
       <WebRTCPeerProvider>

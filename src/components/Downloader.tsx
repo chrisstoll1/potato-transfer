@@ -49,9 +49,9 @@ export function ConnectingToUploader({
 
         <div className="space-y-4 text-stone-700 dark:text-stone-300">
           <p>
-            FilePizza uses direct peer-to-peer connections, but sometimes the
-            connection can get stuck. Here are some possible reasons this can
-            happen:
+            Potato Transfer uses direct peer-to-peer connections, but sometimes
+            the connection can get stuck. Here are some possible reasons this
+            can happen:
           </p>
 
           <ul className="list-none space-y-3">
@@ -59,8 +59,8 @@ export function ConnectingToUploader({
               <span className="text-base">🚪</span>
               <span className="text-sm">
                 The uploader may have closed their browser, lost connectivity,
-                or stopped the upload. FilePizza requires the uploader to stay
-                online continuously because files are transferred directly
+                or stopped the upload. Potato Transfer requires the uploader to
+                stay online continuously because files are transferred directly
                 between browsers.
               </span>
             </li>

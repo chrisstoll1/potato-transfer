@@ -1,6 +1,8 @@
 /// <reference types="@testing-library/jest-dom" />
 import { vi } from 'vitest'
-vi.mock('next-view-transitions', () => ({ Link: (p: any) => <a {...p}>{p.children}</a> }))
+vi.mock('next-view-transitions', () => ({
+  Link: (p: any) => <a {...p}>{p.children}</a>,
+}))
 import React from 'react'
 import { render, fireEvent, waitFor } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
@@ -33,7 +35,12 @@ describe('Downloader subcomponents', () => {
 
   it('DownloadInProgress shows stop button', () => {
     const { getByText } = render(
-      <DownloadInProgress filesInfo={files} bytesDownloaded={0} totalSize={1} onStop={() => {}} />,
+      <DownloadInProgress
+        filesInfo={files}
+        bytesDownloaded={0}
+        totalSize={1}
+        onStop={() => {}}
+      />,
     )
     expect(getByText('Stop Download')).toBeInTheDocument()
   })
@@ -51,7 +58,7 @@ describe('Downloader subcomponents', () => {
       <PasswordEntry errorMessage={null} onSubmit={(v) => (submitted = v)} />,
     )
     fireEvent.change(
-      getByPlaceholderText('Enter a secret password for this slice of FilePizza...'),
+      getByPlaceholderText('Enter a password for this transfer...'),
       { target: { value: 'secret' } },
     )
     fireEvent.submit(getByText('Unlock'))
