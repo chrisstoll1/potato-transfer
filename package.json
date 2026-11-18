@@ -1,6 +1,6 @@
 {
   "name": "potato-transfer",
-  "version": "2.0.0-potato.1",
+  "version": "2.0.0-potato.2",
   "description": "Free peer-to-peer file transfers in your browser.",
   "author": "Alex Kern <alex@kern.io> (http://kern.io)",
   "license": "BSD-3-Clause",
